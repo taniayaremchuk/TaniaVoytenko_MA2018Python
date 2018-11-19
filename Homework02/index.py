@@ -28,7 +28,7 @@ def new_game():
     num_guesses = int(math.ceil(num_guesses))
       
     print ("")
-    print ("New game. Range is from 0 to"), num_range, (".\n")
+    print ("New game. Guess the number from 0 to"), num_range, (".\n")
     print ("Number of remaining guesses is"), num_guesses, (".\n")
     return None
 
@@ -51,7 +51,7 @@ def input_guess(guess):
     global user_guess
     user_guess = int(guess)
     print ("")
-    print ("Guess was ") + guess    
+    print ("Your number ") + guess    
     global num_guesses 
     num_guesses  = num_guesses  - 1 
     print ("Number of remaining guesses is "), str(num_guesses ), (".")
@@ -68,7 +68,7 @@ def input_guess(guess):
         else:
             print ("Loser! The number was "), str(secret_number), ("!")
     else:
-        print "Correct!"
+        print ("Correct!")
         game = True     
     if (game):
         new_game()
